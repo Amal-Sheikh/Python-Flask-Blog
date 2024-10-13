@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+        {% block body %}
+        <!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}');">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin panel</h1>
+                            <span class="admin dashboard"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+           <button class= "btn btn-primary"><a href="/dashboard">Dashboard Home</a></button>
+                <button class= "btn btn-primary"><a href="/logout">logout</a></button>
+                <hr/>
+
+           <h1>Add/Edit post</h1>
+
+
+                <form method="POST" action="/edit{{post.sno}}">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Title..." required aria-label="Name" value="{{post.title}}">
+                            <label for="name">Title:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="tline" id="tline" placeholder="Tagline..." required aria-label="Email"  value="{{post.tagline}}">
+                            <label for="email">Tagline</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug" required aria-label="Phone Number"  value="{{post.slug}}">
+                            <label for="phone_num">Slug:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" name="content" id="content" placeholder="Content" required aria-label="Message"  style="height: 12rem;">{{post.content}}</textarea>
+                            <label for="msg">Content:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" name="img_file" id="img_file" placeholder="Image File..." required aria-label="Message" style="height: 12rem;">{{post.img_file}}</textarea>
+                            <label for="msg">Image File:</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+  </tbody>
+</table>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        {% endblock %}

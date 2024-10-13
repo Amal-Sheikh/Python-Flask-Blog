@@ -1,0 +1,21 @@
+{
+  "params": {
+    "local_server": true,
+    "local_uri": "mysql+pymysql://root:root@localhost:3306/amal",
+    "prod_uri": "mysql+pymysql://root:root@localhost:3306/amal",
+    "fb_url": "https://facebook.com/amal",
+    "tw_url": "https://twitter.com/amal",
+    "gh_url": "https://github.com/amal",
+    "blog_name": "AMAL BLOG",
+    "gmail_user": "amlilsuda@gmail.com",
+    "gmail_password": "",
+    "about_text": "Hi my name is Amal and am learning Flask",
+    "no_of_posts": 1,
+    "admin_user": "Amal@gmail.com",
+    "admin_password": "now@",
+    "admin_dashboard": "dashboard_value",
+    "upload_location": "C:\\Users\\hp\\Desktop\\flask"
+  }
+  }
+
+
